@@ -107,4 +107,10 @@ ul {
   .posts a {
     color: #ffffff;
   }
-} 
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 90%;
+  }
+}
