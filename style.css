@@ -1,24 +1,110 @@
+:root {
+  --font-serif: 'Georgia', serif;
+  --font-sans: Inter, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 body {
-	padding: 0 1rem;
+	padding: 0 0.5rem;
+  background: #fcfaf8;
+  max-width: 80%;
+  line-height: 1.5;
+  display: flex;
+  font-family: var(--font-serif);
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto; 
+}
+
+main {
+  flex: 1;
+  max-width: 96ch;
+  text-wrap: pretty;
+}
+
+header h2 {
+  margin-bottom: 0;
+}
+
+h1, h2, h3, h4, .date, .posts {
+  font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h4 {
-	font-family: sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  margin-bottom: 0;
 }
 
 footer {
-	font-family: monospace;
+  font-family: monospace;
+  color: #999999;
+  padding-bottom: 0.5rem;
+}
+
+footer a {
+  color: #999999;
 }
 
 hr {
   border: black;
   background-color: lightgray;
   overflow: visible;
-  text-align: center;
   height: 1px;
 }
 
-@media (prefers-color-scheme: dark) {
-	h1, h2, h3, h4, h5, p { color: white; }
-	body { background-color: #0f0f0f; }
+.posts {
+   font-weight: 400;
+   list-style: none;
+   color: #161616;
+   max-width: 90%;
+   margin: auto;
 }
+
+.posts a {
+  text-decoration: none;
+  color: #000;
+}
+
+.posts a:hover, 
+.posts a:focus {
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--text-main); 
+}
+
+ul {
+  padding: 0;
+}
+
+.right {
+  float: right;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #161616;
+    color: #fcfaf8;
+  }
+
+  footer, footer a {
+    color: #aaaaaa;
+  }
+
+  hr {
+    border: none;
+    background-color: #333333;
+  }
+
+  .posts {
+    color: #e0e0e0;
+  }
+
+  .posts a {
+    color: #ffffff;
+  }
+} 
