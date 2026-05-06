@@ -26,6 +26,10 @@ header h2 {
   margin-bottom: 0;
 }
 
+.date {
+  color: #999999;
+}
+
 h1, h2, h3, h4, .date, .posts {
   font-family: var(--font-sans);
 }
